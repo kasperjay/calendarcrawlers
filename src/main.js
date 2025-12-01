@@ -5,6 +5,7 @@
 
 const GenericVenueActor = require('./actors/genericVenueActor');
 const ExampleVenueActor = require('./actors/exampleVenueActor');
+const BandsintownVenueActor = require('./actors/bandsintownVenueActor');
 
 /**
  * Get actor configuration from environment variables or input
@@ -47,6 +48,12 @@ async function main() {
         switch (config.actorType) {
             case 'example':
                 actor = new ExampleVenueActor();
+                break;
+            case 'bandsintown':
+                if (!config.venueName || !config.venueUrl) {
+                    throw new Error('venueName and venueUrl are required for bandsintown actor');
+                }
+                actor = new BandsintownVenueActor(config);
                 break;
             case 'generic':
             default:

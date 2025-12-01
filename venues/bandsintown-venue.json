@@ -1,0 +1,16 @@
+{
+  "venueName": "Bandsintown Venue Example",
+  "venueUrl": "https://example.com/events",
+  "actorType": "bandsintown",
+  "description": "Configuration for venues using Bandsintown widget",
+  "notes": [
+    "Many venues use Bandsintown widget for event listings",
+    "This actor automatically detects common Bandsintown selectors",
+    "No custom selectors needed - the actor handles it automatically"
+  ],
+  "commonVenuePlatforms": [
+    "Venues with Bandsintown integration",
+    "Independent music venues using Bandsintown API",
+    "Festival sites with Bandsintown widget"
+  ]
+}

@@ -8,8 +8,8 @@
       "type": "string",
       "description": "Type of actor to run",
       "default": "generic",
-      "enum": ["generic", "example"],
-      "enumTitles": ["Generic Venue", "Example Venue"]
+      "enum": ["generic", "bandsintown", "example"],
+      "enumTitles": ["Generic Venue", "Bandsintown Venue", "Example Venue"]
     },
     "venueName": {
       "title": "Venue Name",
