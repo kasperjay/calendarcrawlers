@@ -1,0 +1,24 @@
+{
+  "name": "calendarcrawlers",
+  "version": "1.0.0",
+  "description": "Scrape artist data from calendar pages one by one to reduce errors",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "apify",
+    "scraper",
+    "calendar",
+    "events",
+    "artists"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apify": "^3.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "crawlee": "^3.5.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "actorSpecification": 1,
+  "name": "calendar-crawler-generic",
+  "title": "Calendar Crawler - Generic Venue",
+  "description": "Scrapes event and artist information from venue calendar pages",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "calendar-crawler"
+  },
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "categories": [
+    "ENTERTAINMENT"
+  ]
+}
