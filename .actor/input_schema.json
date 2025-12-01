@@ -1,0 +1,61 @@
+{
+  "title": "Calendar Crawler Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "actorType": {
+      "title": "Actor Type",
+      "type": "string",
+      "description": "Type of actor to run",
+      "default": "generic",
+      "enum": ["generic", "bandsintown", "example"],
+      "enumTitles": ["Generic Venue", "Bandsintown Venue", "Example Venue"]
+    },
+    "venueName": {
+      "title": "Venue Name",
+      "type": "string",
+      "description": "Name of the venue to scrape",
+      "editor": "textfield"
+    },
+    "venueUrl": {
+      "title": "Venue Calendar URL",
+      "type": "string",
+      "description": "URL of the venue's calendar/events page",
+      "editor": "textfield",
+      "pattern": "^https?://.+"
+    },
+    "selectors": {
+      "title": "CSS Selectors",
+      "type": "object",
+      "description": "CSS selectors for scraping (optional - defaults provided)",
+      "editor": "json",
+      "properties": {
+        "eventContainer": {
+          "title": "Event Container Selector",
+          "type": "string",
+          "description": "CSS selector for event containers",
+          "editor": "textfield"
+        },
+        "eventTitle": {
+          "title": "Event Title Selector",
+          "type": "string",
+          "description": "CSS selector for event titles",
+          "editor": "textfield"
+        },
+        "eventDate": {
+          "title": "Event Date Selector",
+          "type": "string",
+          "description": "CSS selector for event dates",
+          "editor": "textfield"
+        },
+        "eventLink": {
+          "title": "Event Link Selector",
+          "type": "string",
+          "description": "CSS selector for event links",
+          "editor": "textfield"
+        }
+      }
+    }
+  },
+  "required": ["venueName", "venueUrl"]
+}

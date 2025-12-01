@@ -1,0 +1,16 @@
+{
+  "venueName": "Example Venue",
+  "venueUrl": "https://example.com/events",
+  "description": "Template configuration for a venue using standard event listing layout",
+  "selectors": {
+    "eventContainer": ".event-item",
+    "eventTitle": ".event-title",
+    "eventDate": ".event-date",
+    "eventLink": "a"
+  },
+  "notes": [
+    "Adjust selectors based on actual HTML structure",
+    "Test with browser dev tools first",
+    "Some venues may need custom parsing logic"
+  ]
+}
