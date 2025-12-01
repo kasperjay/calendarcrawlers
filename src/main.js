@@ -51,14 +51,14 @@ async function main() {
                 break;
             case 'bandsintown':
                 if (!config.venueName || !config.venueUrl) {
-                    throw new Error('venueName and venueUrl are required for bandsintown actor');
+                    throw new Error('venueName and venueUrl are required for bandsintown actor. Provide them via VENUE_NAME and VENUE_URL environment variables or in Apify input JSON.');
                 }
                 actor = new BandsintownVenueActor(config);
                 break;
             case 'generic':
             default:
                 if (!config.venueName || !config.venueUrl) {
-                    throw new Error('venueName and venueUrl are required for generic actor');
+                    throw new Error('venueName and venueUrl are required for generic actor. Provide them via VENUE_NAME and VENUE_URL environment variables or in Apify input JSON.');
                 }
                 actor = new GenericVenueActor(config);
                 break;

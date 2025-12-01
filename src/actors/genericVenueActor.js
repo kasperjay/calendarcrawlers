@@ -32,6 +32,8 @@ class GenericVenueActor extends BaseVenueActor {
         const events = [];
         
         // Default selectors if not provided
+        // Note: Attribute wildcards like [class*="event"] are used as fallbacks and may be slower on large pages
+        // Prefer providing specific selectors when possible for better performance
         const eventSelector = selectors.eventContainer || '.event, .show, .performance, [class*="event"]';
         const titleSelector = selectors.eventTitle || '.title, .name, h2, h3, [class*="title"]';
         const dateSelector = selectors.eventDate || '.date, time, [class*="date"]';

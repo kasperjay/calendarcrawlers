@@ -22,7 +22,8 @@ function extractArtists(eventText) {
     const text = eventText.trim();
     
     // Pattern 1: "Artist with/w/ Artist"
-    const withPattern = /^([^(]+?)\s+(?:with|w\/)\s+(.+?)(?:\s*\(|$)/i;
+    // Non-capturing group (?:...) used to match but not capture parentheses or end of string
+    const withPattern = /^([^(]+?)\s+(?:with|w\/)\s+(.+?)(?=\s*\(|$)/i;
     let match = text.match(withPattern);
     if (match) {
         return {
@@ -32,7 +33,7 @@ function extractArtists(eventText) {
     }
 
     // Pattern 2: "Artist ft./feat./featuring Artist"
-    const featPattern = /^([^(]+?)\s+(?:ft\.|feat\.|featuring)\s+(.+?)(?:\s*\(|$)/i;
+    const featPattern = /^([^(]+?)\s+(?:ft\.|feat\.|featuring)\s+(.+?)(?=\s*\(|$)/i;
     match = text.match(featPattern);
     if (match) {
         return {
@@ -42,7 +43,7 @@ function extractArtists(eventText) {
     }
 
     // Pattern 3: "Artist + Artist" or "Artist & Artist"
-    const plusPattern = /^([^+&]+)[+&](.+?)(?:\s*\(|$)/;
+    const plusPattern = /^([^+&]+)[+&](.+?)(?=\s*\(|$)/;
     match = text.match(plusPattern);
     if (match) {
         return {
